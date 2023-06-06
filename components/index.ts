@@ -1,1 +1,3 @@
-export {};
+import Loading from './Loading';
+
+export { Loading };
