@@ -1,6 +1,98 @@
 import { Icons } from '@components';
+import MenuItem from './MenuItem';
 
 type HeaderPropsType = {};
+
+const MENU = [
+  {
+    name: 'OYUN BİLGİSİ',
+    items: [
+      {
+        name: 'Şampiyonlar',
+        href: '/champions',
+      },
+      {
+        name: 'Şampiyonlar savaşı',
+        href: '/tft',
+      },
+    ],
+  },
+  {
+    name: 'MEDYA',
+    items: [],
+  },
+  {
+    name: 'HABERLER',
+    items: [],
+  },
+  {
+    name: 'LİDERLİK TABLOSU',
+    items: [],
+  },
+  {
+    name: 'DESTEK',
+    items: [
+      {
+        name: 'Destek',
+        href: '/support',
+      },
+      {
+        name: 'ÖZELLİKLER',
+        href: '/features',
+      },
+      {
+        name: 'DESTEK',
+        href: '/support',
+      },
+      {
+        name: 'TOPLULUK İLKELERİ',
+        href: '/community',
+      },
+    ],
+  },
+  {
+    name: 'SOSYAL',
+    items: [
+      {
+        name: 'Sosyal Medya',
+        href: '/social',
+      },
+      {
+        name: 'YouTube',
+        href: '/youtube',
+      },
+      {
+        name: 'Instagram',
+        href: '/instagram',
+      },
+      {
+        name: 'Facebook',
+        href: '/facebook',
+      },
+      {
+        name: 'Twitter',
+        href: '/twitter',
+      },
+      {
+        name: 'Discord',
+        href: '/discord',
+      },
+    ],
+  },
+  {
+    name: 'Daha Fazlası',
+    items: [
+      {
+        name: 'Daha Fazlası',
+        href: '/more',
+      },
+      {
+        name: 'ESPOR',
+        href: '/espor',
+      },
+    ],
+  },
+];
 
 const Header = (props: HeaderPropsType) => {
   return (
@@ -12,23 +104,9 @@ const Header = (props: HeaderPropsType) => {
         </div>
         <div className="flex flex-row align-center items-center">
           <div className="ml-9 mr-10 text-13">
-            <button className="text-gray-50 py-2 px-4 hover:bg-gray-100 rounded-7 mr-4 font-bold">OYUN BİLGİSİ</button>
-            <button className="text-gray-50 py-2 px-4 hover:bg-gray-100 rounded-7 mr-4 font-bold">MEDYA</button>
-            <button className="text-gray-50 py-2 px-4 hover:bg-gray-100 rounded-7 mr-4 font-bold cursor-not-allowed">
-              HABERLER
-            </button>
-            <button className="text-gray-50 py-2 px-4 hover:bg-gray-100 rounded-7 mr-4 font-bold cursor-not-allowed">
-              LİDERLİK TABLOSU
-            </button>
-            <button className="text-gray-50 py-2 px-4 hover:bg-gray-100 rounded-7 mr-4 font-bold cursor-not-allowed">
-              DESTEK
-            </button>
-            <button className="text-gray-50 py-2 px-4 hover:bg-gray-100 rounded-7 mr-4 font-bold cursor-not-allowed">
-              SOSYAL
-            </button>
-            <button className="text-gray-50 py-2 px-4 hover:bg-gray-100 rounded-7 mr-4 font-bold cursor-not-allowed">
-              Daha Fazlası
-            </button>
+            {MENU.map((item, index) => (
+              <MenuItem key={index} name={item.name} items={item.items} />
+            ))}
           </div>
         </div>
         <div className="flex flex-row align-center items-center">
