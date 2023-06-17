@@ -37,7 +37,7 @@ export default function MenuItem({ name, items }: MenuItemPropTypes) {
         onClick={toggleDropdown}
       >
         {name}
-        {haveAnyItems && <div className="flex relative items-center">{arrowIcon}</div>}
+        {haveAnyItems && <div className="flex relative items-center px-2">{arrowIcon}</div>}
       </DropdownMenu.Button>
       <DropdownMenu.Items className="absolute ringt-0 mt-2 w-56 origin-top-right divide-y divide-gray-1">
         {items.map((item, index) => (
