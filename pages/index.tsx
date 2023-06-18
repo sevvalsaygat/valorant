@@ -1,3 +1,11 @@
+import { Application } from '@layouts';
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <Application>
+      <div className="flex flex-col">
+        <div className="">HOMEEES</div>
+      </div>
+    </Application>
+  );
 }

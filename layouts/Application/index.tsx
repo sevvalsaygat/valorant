@@ -1,4 +1,4 @@
-import { Loading } from '@components';
+import { Loading, Header } from '@components';
 
 type ApplicationPropTypes = {
   isLoading?: boolean;
@@ -8,6 +8,7 @@ type ApplicationPropTypes = {
 export default function Application({ isLoading, children }: ApplicationPropTypes) {
   return (
     <div>
+      <Header />
       {children}
       {isLoading && <Loading />}
     </div>
