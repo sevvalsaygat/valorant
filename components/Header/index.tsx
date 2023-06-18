@@ -8,11 +8,11 @@ const MENU = [
     name: 'OYUN BİLGİSİ',
     items: [
       {
-        name: 'Şampiyonlar',
+        name: 'ŞAMPİYONLAR',
         href: '/champions',
       },
       {
-        name: 'Şampiyonlar savaşı',
+        name: 'ŞAMPİYONLAR SAVAŞI',
         href: '/tft',
       },
     ],
