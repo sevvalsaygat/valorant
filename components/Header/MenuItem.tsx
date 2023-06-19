@@ -53,9 +53,9 @@ export default function MenuItem({ name, items }: MenuItemPropTypes) {
       </DropdownMenu.Button>
       <DropdownMenu.Items className="absolute ringt-0 mt-2 w-56 origin-top-right divide-y divide-gray-1 border-transparent rounded-7 bg-gray-250">
         {items.map((item, index) => (
-          <DropdownMenu.Item as="div" key={index} className=" py-5 px-4 border-t-4 w-full">
+          <DropdownMenu.Item as="div" key={index} className="py-3 px-4 border-t-4 w-full">
             <Link
-              className="text-13 text-gray-300 px-5 py-2 hover:bg-gray-200 border-transparent rounded-7"
+              className="flex text-13 text-gray-300 px-3 py-2 hover:bg-gray-200 border-transparent rounded-7"
               href={item.href}
             >
               {item.name}
