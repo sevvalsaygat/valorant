@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 
 import { AgentType } from '@types';
 
@@ -10,8 +11,10 @@ type AgentItemType = {
 export default function AgentItem({ agent }: AgentItemType) {
   const [hovered, setHovered] = useState(false);
 
+  const agentLink = `/agents/${agent.uuid}`;
+
   return (
-    <div className="relative">
+    <Link href={agentLink} className="relative">
       <div
         className={`absolute top-0 left-0 right-0 bottom-0 hover:bg-red-150 hover:opacity-70 z-10 animate-slide ${
           hovered ? 'opacity-70' : 'opacity-0'
@@ -36,6 +39,6 @@ export default function AgentItem({ agent }: AgentItemType) {
         alt={agent.displayName}
         src={agent.fullPortrait!!}
       />
-    </div>
+    </Link>
   );
 }
