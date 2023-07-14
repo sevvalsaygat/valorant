@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes slide {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left top ;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: right top;
+  }
+}
+
+.animate-slide:hover {
+  animation-name: slide;
+  animation-duration: 1s; 
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.name-visible {
+  display: block;
+}

@@ -1,5 +1,6 @@
 import { Icons } from '@components';
 import MenuItem from './MenuItem';
+import Link from 'next/link';
 
 type HeaderPropsType = {};
 
@@ -8,11 +9,11 @@ const MENU = [
     name: 'OYUN BİLGİSİ',
     items: [
       {
-        name: 'ŞAMPİYONLAR',
+        name: 'AJANLAR',
         href: '/champions',
       },
       {
-        name: 'ŞAMPİYONLAR SAVAŞI',
+        name: 'HARİTALAR',
         href: '/tft',
       },
     ],
@@ -99,7 +100,9 @@ const Header = (props: HeaderPropsType) => {
     <div className="bg-black px-12 py-6">
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row items-center">
-          <Icons.SvgLogo className="text-white cursor-pointer hover:text-red-300" />
+          <Link href="/">
+            <Icons.SvgLogo className="text-white cursor-pointer hover:text-red-300" />
+          </Link>
           <Icons.SvgRiotBar className="ml-7" />
         </div>
         <div className="flex flex-row align-center items-center">

@@ -7,7 +7,7 @@ type ApplicationPropTypes = {
 
 export default function Application({ isLoading, children }: ApplicationPropTypes) {
   return (
-    <div>
+    <div className="flex-1">
       <Header />
       {children}
       {isLoading && <Loading />}
