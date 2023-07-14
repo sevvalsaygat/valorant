@@ -46,7 +46,6 @@ module.exports = {
         '7': '0.4375rem',
       },
       lineHeight: {
-        //24px kaç rem
         '12': '1.5rem',
       },
       animation: {

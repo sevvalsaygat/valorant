@@ -33,13 +33,7 @@ export default function AgentDetails() {
               {agentData.data.displayName}
             </div>
             <div className="w-3/5 flex justify-center">
-              <Image
-                className=""
-                height={700}
-                width={700}
-                alt={agentData.data.description}
-                src={agentData.data.fullPortrait!!}
-              />
+              <Image height={700} width={700} alt={agentData.data.description} src={agentData.data.fullPortrait!!} />
             </div>
             <div className="flex flex-col w-2/5 pt-20">
               <div className="flex flex-col text-white">&#47;&#47; ROLÜ</div>
